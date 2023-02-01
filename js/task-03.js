@@ -17,7 +17,7 @@ const galleryEl = document.querySelector(".gallery");
 
 const makeGallery = (pictures) => {
   return pictures.reduce((resultString, { url, alt }) => {
-    return (resultString += `<li><img src="${url}" alt="${alt}" width="240"></li>`);
+    return (resultString += `<li><img src="${url}" alt="${alt}" width="320"></li>`);
   }, ``);
 };
 
