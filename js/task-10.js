@@ -10,7 +10,6 @@ const input = document.querySelector("input");
 const makeBoxesMarkup = () => {
   const createBoxes = (amount) => {
     const boxes = new Array(amount).fill("");
-    console.log(boxes);
     return boxes.reduce((resultString, element, index, array) => {
       return (resultString += `<div style = "width: ${
         30 + index * 10
