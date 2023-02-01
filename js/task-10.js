@@ -23,6 +23,7 @@ const makeBoxesMarkup = () => {
 
 const removeBoxes = () => {
   boxesEl.innerHTML = "";
+  input.value = "";
 };
 
 createBtn.addEventListener("click", makeBoxesMarkup);
