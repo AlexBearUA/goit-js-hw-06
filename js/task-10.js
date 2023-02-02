@@ -7,18 +7,18 @@ const createBtn = document.querySelector("button[data-create]");
 const destroyBtn = document.querySelector("button[data-destroy]");
 const input = document.querySelector("input");
 
-const makeBoxesMarkup = () => {
-  const createBoxes = (amount) => {
-    const boxes = new Array(amount).fill("");
-    return boxes.reduce((resultString, element, index, array) => {
+const makeBoxesMarkup = (amount) => {
+  amount = Number(input.value);
+  const boxesMarkUp = new Array(amount)
+    .fill("")
+    .reduce((resultString, element, index) => {
       return (resultString += `<div style = "width: ${
         30 + index * 10
       }px; height: ${
         30 + index * 10
       }px; background-color: ${getRandomHexColor()}"></div>`);
     }, ``);
-  };
-  boxesEl.insertAdjacentHTML("beforeend", createBoxes(Number(input.value)));
+  boxesEl.insertAdjacentHTML("beforeend", boxesMarkUp);
 };
 
 const removeBoxes = () => {
