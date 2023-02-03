@@ -2,14 +2,13 @@ const form = document.querySelector(".login-form");
 
 const loginFormSubmitHeandler = (event) => {
   event.preventDefault();
-  const email = event.currentTarget.elements.email.value;
-  const password = event.currentTarget.elements.password.value;
+
   const formData = {
-    email,
-    password,
+    email: event.currentTarget.elements.email.value,
+    password: event.currentTarget.elements.password.value,
   };
 
-  email === "" || password === ""
+  formData.email === "" || formData.password === ""
     ? alert("Заповніть форму")
     : console.log(formData);
 
